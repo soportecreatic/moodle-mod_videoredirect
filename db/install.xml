@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/videoredirect/db" VERSION="20190319" COMMENT="XMLDB file for Moodle mod/videoredirect"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="videoredirect" COMMENT="Defines Video Label with Redirect activity">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="intro" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="videolink" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="URL of the video that will appear on course view."/>
+        <FIELD NAME="videohtmlid" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Video object ID."/>
+        <FIELD NAME="videohtmlclass" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="video object classes."/>
+        <FIELD NAME="videowidth" TYPE="int" LENGTH="5" DEFAULT="0" NOTNULL="false" SEQUENCE="false" COMMENT="Video width on screen."/>
+        <FIELD NAME="videoaspect" TYPE="char" LENGTH="20" DEFAULT="0" NOTNULL="false" SEQUENCE="false" COMMENT="Video aspect."/>
+        <FIELD NAME="redirectonend" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Allows browser redirection when video ends."/>
+        <FIELD NAME="redirecttext" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="redirectsecs" TYPE="int" LENGTH="4" SEQUENCE="false" COMMENT="Number of seconds before browser redirection."/>
+        <FIELD NAME="redirecturl" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Page where the browser will redirect."/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" DEFAULT="0" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="course" UNIQUE="false" FIELDS="course"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
