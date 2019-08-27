@@ -1,8 +1,8 @@
 # Video with Redirect #
 
-TODO Describe the plugin shortly here.
+Loads a video frame that can redirect you to another page when video ends. It relies on VideoJS plugin, but also allows to play Vimeo videos.
 
-TODO Provide more detailed description here.
+This plugin relies on VideoJS frame to load a video that can be configured to redirect to a specific URL when inserted video ends playing. It loads video frame in the course view, like a label, but it allows to set a redirection when video ends. This plugin is useful, for example, to create a video-based course, when you can guide user automatically to another video, topic or activity. It also supports Vimeo player.
 
 ## License ##
 
